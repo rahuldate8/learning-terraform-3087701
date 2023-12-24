@@ -78,7 +78,7 @@ module "blog_autoscaling" {
   instance_type   = var.instance_type
 }
 
-module "blog_alb" {
+module "alb" {
   source = "terraform-aws-modules/alb/aws"
 
   name    = "blog-alb"
@@ -133,7 +133,7 @@ module "blog_alb" {
       port             = 80
       target_type      = "instance"
       # target_id        = aws_instance.blog.id
-      target_id        = arn
+      target_id        = alb.arn
     }
   }
 
