@@ -133,7 +133,7 @@ module "blog_alb" {
       port             = 80
       target_type      = "instance"
       # target_id        = aws_instance.blog.id
-      target_id        = blog_alb.arn
+      target_id        = arn
     }
   }
 
