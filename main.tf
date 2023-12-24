@@ -23,7 +23,7 @@ data "aws_ami" "app_ami" {
 #  }
 # }
 
-resource "aws_vpc" "default" {
+data "aws_vpc" "default" {
   default = true
 }
 
